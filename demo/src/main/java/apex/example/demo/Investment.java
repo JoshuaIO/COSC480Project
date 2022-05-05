@@ -1,5 +1,6 @@
 package apex.example.demo;
 import javax.persistence.*;
+
 @Entity
 @Table(name = "Investment")
 public class Investment {

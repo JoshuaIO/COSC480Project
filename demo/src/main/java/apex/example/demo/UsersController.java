@@ -1,9 +1,8 @@
 package apex.example.demo;
-import apex.example.demo.Users;
 import apex.example.demo.UsersRepository;
+import org.hibernate.internal.build.AllowPrintStacktrace;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 
@@ -29,21 +28,16 @@ public class UsersController {
         usersRepository.save(n);
         return "Saved";
     }
-   /* @GetMapping(value="/all")
+
+   /* @PostMapping(path="/add")
+    public @ResponseBody String addUser(@RequestBody Users users){
+
+    }*/
+
+    @GetMapping(value="/all")
     public @ResponseBody
     Iterable<Users> getAllUsers() {
         return usersRepository.findAll();
-    }*/
-   @RequestMapping("/")
-   public ModelAndView welcome(){
-       ModelAndView modelAndView = new ModelAndView();
-       modelAndView.setViewName("/index.html");
-       return modelAndView;
-   }
-    @RequestMapping("/login")
-    public ModelAndView login(){
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("/login.html");
-        return modelAndView;
     }
+
 }

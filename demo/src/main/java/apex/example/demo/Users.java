@@ -1,10 +1,11 @@
 package apex.example.demo;
 import javax.persistence.*;
+
 @Entity
 @Table(name= "Users")
 public class Users {
     @Id
-    @GeneratedValue(strategy = javax.persistence.GenerationType.IDENTITY )
+    @GeneratedValue(strategy = GenerationType.IDENTITY )
     @Column(name = "usersId")
     private Integer usersId;
 
