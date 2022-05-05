@@ -35,11 +35,11 @@ body {
           background-size: auto;
   
 }
-<a class="logo" href="">Logo</a>
+/*<a class="logo" href="">Logo</a>
 
 .logo { 
-
-}
+  
+}*/
 .navigation{
 overflow: hidden;
   backdrop-filter: blur(4px) saturate(180%);

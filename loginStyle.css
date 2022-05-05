@@ -1,5 +1,3 @@
-
-
 .wallpaper{
   border-radius:2px;
   /*padding:40px 60px;*/
@@ -53,7 +51,7 @@ body,html{
   border-style:solid;
   border-color:black;
   float:center;
-  width:50%;
+  width:60%;
   height:100%;
   margin-left: 25%;
   border-radius:30px;
@@ -74,7 +72,7 @@ body,html{
   width:100%;
 }
 
-#username,#password{
+#username,#password,#zipcode,#email{
  /* background-color:green;*/
   border-radius:5px;
   border-color:black;
@@ -91,7 +89,7 @@ body,html{
 @media screen and (max-width: 900px) {
   body,wallpaper{ 
      width:100%;
-     heigh: 100%;
+     height: 100%;
     padding:0px 0px;
     color:blue;
   }
@@ -99,12 +97,11 @@ body,html{
   bodyContent,innerLoginContent {
   float:center;
   box-sizing:border;
-  padding 0px;
     width:100%;
     height:100%;
     margin-left:0%;
   }
-  #username,#password {
+  #username,#password,#zipcode,#email {
     padding:0px;
     width:100%;
    text-align:center;
