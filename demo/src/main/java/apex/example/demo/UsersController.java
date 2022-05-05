@@ -1,8 +1,10 @@
 package apex.example.demo;
 import apex.example.demo.UsersRepository;
+import org.apache.tomcat.util.net.jsse.JSSEUtil;
 import org.hibernate.internal.build.AllowPrintStacktrace;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 
@@ -29,10 +31,15 @@ public class UsersController {
         return "Saved";
     }
 
-   /* @PostMapping(path="/add")
-    public @ResponseBody String addUser(@RequestBody Users users){
-
-    }*/
+    @PostMapping(path="/registerRequest")
+    public ModelAndView addUser(@RequestBody String str){
+        UsersParser usersParser = new UsersParser(str);
+        usersRepository.save(usersParser.toList());
+        System.out.println("Saved");
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("/dashboard.html");
+        return modelAndView;
+    }
 
     @GetMapping(value="/all")
     public @ResponseBody

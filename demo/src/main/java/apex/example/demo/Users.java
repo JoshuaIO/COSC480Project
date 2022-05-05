@@ -75,5 +75,24 @@ public class Users {
     public void setType(String type) {
         this.type = type;
     }
+
+    public Users(String username, String password, String email, String zipcode) {
+        this.password = password;
+        this.username = username;
+        this.email = email;
+        this.zipcode = zipcode;
+    }
+
+    public Users() {
+        this.password = "password";
+        this.username = "username";
+        this.email = "email";
+        this.zipcode = "zipcode";
+    }
+
+    @Override
+    public String toString() {
+        return username + " " + password + " "+email +" "+ zipcode;
+    }
 }
 

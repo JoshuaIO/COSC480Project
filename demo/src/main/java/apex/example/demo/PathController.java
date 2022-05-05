@@ -26,7 +26,7 @@ public class PathController {
         modelAndView.setViewName("/register.html");
         return modelAndView;
     }
-    @PostMapping("/registerRequest")
+    @PostMapping("/add")
     public String regRequest(@RequestBody String name){
         //name = "TestFromHTMLPage";
         System.out.println((name));
@@ -35,8 +35,10 @@ public class PathController {
 
     @GetMapping("/dashboard")
     public ModelAndView dashboard(){
+
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("/dashboard.html");
         return modelAndView;
+        //
     }
 }
