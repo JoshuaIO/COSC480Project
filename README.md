@@ -1,10 +1,10 @@
-# COSC480Project4-14-2022
+# COSC480Project
 Project
 
 Final Project Setup
 Joshua Igbeta, Solomon Jackson, Nelson Okpah
 Dependencies and Steps
-	Project Link: https://github.com/JoshuaIO/COSC480Project4-14-2022
+	Project Link: https://github.com/JoshuaIO/COSC480Project
 
 1. To run this project, it’s best to download IntelliJ IDE which can be found here: https://www.jetbrains.com/idea/
 
